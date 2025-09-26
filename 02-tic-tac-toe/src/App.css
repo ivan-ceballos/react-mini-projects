@@ -6,10 +6,20 @@
 .game {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
 }
 
-.cell {
+.square {
   border: 2px solid #393E46;
-  width: 60px;
-  height: 60px;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+}
+
+.square.selected {
+  cursor: not-allowed;
 }
