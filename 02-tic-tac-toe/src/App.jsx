@@ -15,10 +15,14 @@ function App() {
 
 
   const updateBoard = (index) => {
-    if (board[index]) return 
+    if (board[index]) return
+
     const newBoard = [...board]
     newBoard[index] = turn
     setBoard(newBoard)
+
+    const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
+    setTurn(newTurn)
   }
 
   return (
