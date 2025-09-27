@@ -13,7 +13,7 @@ function App() {
 
   const updateBoard = (index) => {
     // No actualizar si ya hay algo en la posición
-    if (board[index]) return
+    if (board[index] || winner) return
 
     // Actualizar el tablero
     const newBoard = [...board]
