@@ -2,12 +2,15 @@ import { useState } from 'react'
 import './App.css'
 
 import { Square } from './components/Square'
-import { TURNS, WINNING_COMBOS } from './utils/constants'
+import { TURNS } from './utils/constants'
+import { evaluateBoard } from './utils/board'
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null))
   const [turn, setTurn] = useState(TURNS.X)
-  
+  // null = no hay ganador - false = empate
+  const [winner, setWinner] = useState(null)
+
   const updateBoard = (index) => {
     // No actualizar si ya hay algo en la posición
     if (board[index]) return
@@ -20,6 +23,10 @@ function App() {
     // Cambiar el turno
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
     setTurn(newTurn)
+
+    // Chequear si hay un ganador
+    const newWinner = evaluateBoard(newBoard)
+    if (newWinner !== null) setWinner(newWinner)
   }
 
   return (
