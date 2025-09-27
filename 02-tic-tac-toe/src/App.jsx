@@ -41,11 +41,14 @@ function App() {
                 value={value}
                 index={index}
                 updateBoard={updateBoard}
-                selected={board[index] != null}
               />
             )
           })
         }
+      </section>
+      <section className='turn'>
+        <Square value={TURNS.X} selected={turn === TURNS.X}></Square>
+        <Square value={TURNS.O} selected={turn === TURNS.O}></Square>
       </section>
     </main>
   )

@@ -1,5 +1,8 @@
 .board {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  gap: 40px;
 }
 
 
@@ -9,17 +12,8 @@
   gap: 2px;
 }
 
-.square {
-  border: 2px solid #393E46;
-  width: 120px;
-  height: 120px;
-  cursor: pointer;
+.turn {
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 80px;
-}
-
-.square.selected {
-  cursor: not-allowed;
+  gap: 15px;
 }
