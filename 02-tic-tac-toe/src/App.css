@@ -38,3 +38,26 @@
   justify-content: center;
   gap: 15px;
 }
+
+.winner-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.winner-modal-content {
+  background-color: #0D0F13;
+  border: 2px solid #393E46;
+  width: 400px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}

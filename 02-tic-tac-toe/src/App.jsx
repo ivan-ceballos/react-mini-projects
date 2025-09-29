@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 import { Square } from './components/Square'
+import { WinnerModal } from './components/WinnerModal'
 import { TURNS } from './utils/constants'
 import { evaluateBoard } from './logic/board'
 
@@ -57,6 +58,7 @@ function App() {
         <Square value={TURNS.X} selected={turn === TURNS.X}></Square>
         <Square value={TURNS.O} selected={turn === TURNS.O}></Square>
       </section>
+      <WinnerModal winner={winner} resetGame={resetGame} />
     </main>
   )
 }
