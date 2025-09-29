@@ -1,4 +1,5 @@
 import { WINNING_COMBOS } from "../utils/constants.js"
+import { shootConfetti } from "../utils/confetti.js"
 
 export const checkWinner = (boardToCheck) => {
   for (const combo of WINNING_COMBOS) {
@@ -14,7 +15,10 @@ export const checkWinner = (boardToCheck) => {
 
 export const evaluateBoard = (board) => {
     const winner = checkWinner(board)
-    if (winner) return winner
+    if (winner) {
+      shootConfetti(winner)
+      return winner
+    }
     if (!board.includes(null)) return false
     return null
 }
