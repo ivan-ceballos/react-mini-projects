@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,4 +9,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #222831;
+  font-family: system-ui;
+}
+
+body.no-cursor {
+  cursor: none;
 }

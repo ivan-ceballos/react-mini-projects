@@ -1,0 +1,18 @@
+.follower {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid #393E46;
+  border-radius: 50%;
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+}
+
+.toggle-button {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #047638;
+  color: #eeeeee;
+}
