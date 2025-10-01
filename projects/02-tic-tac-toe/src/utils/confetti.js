@@ -10,8 +10,8 @@ export const shootConfetti = (winnerSymbol) => {
     decay: 0.93,
     origin: { y: 0.9 },
     shapes: [shape]
-  });
-  
+  })
+
   confetti({
     particleCount: 70,
     spread: 65,
@@ -19,5 +19,5 @@ export const shootConfetti = (winnerSymbol) => {
     decay: 0.94,
     origin: { y: 0.95 },
     shapes: [shape]
-  });
+  })
 }

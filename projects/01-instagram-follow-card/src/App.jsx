@@ -34,10 +34,10 @@ const users = [
   }
 ]
 
-function App() {
+function App () {
   return (
     <section className='App'>
-      <header className="App-header">
+      <header className='App-header'>
         <strong className='App-headerTitle'>Sugerencias para ti</strong>
         <aside className='App-headerAside'>Ver todo</aside>
       </header>

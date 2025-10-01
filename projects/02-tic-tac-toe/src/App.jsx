@@ -6,7 +6,7 @@ import { WinnerModal } from './components/WinnerModal'
 import { TURNS } from './utils/constants'
 import { evaluateBoard } from './logic/board'
 
-function App() {
+function App () {
   const [board, setBoard] = useState(Array(9).fill(null))
   const [turn, setTurn] = useState(TURNS.X)
   // null = no hay ganador - false = empate
@@ -55,8 +55,8 @@ function App() {
         }
       </section>
       <section className='turn'>
-        <Square value={TURNS.X} selected={turn === TURNS.X}></Square>
-        <Square value={TURNS.O} selected={turn === TURNS.O}></Square>
+        <Square value={TURNS.X} selected={turn === TURNS.X} />
+        <Square value={TURNS.O} selected={turn === TURNS.O} />
       </section>
       <WinnerModal winner={winner} resetGame={resetGame} />
     </main>

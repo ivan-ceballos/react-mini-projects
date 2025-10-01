@@ -1,9 +1,9 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 const InstagramFollowCard = ({ name, userName, userNameTwitter, commonFollowers }) => {
   const followersText = commonFollowers === 0 ? 'Sugerencia para ti' : `${commonFollowers} personas en comun siguen esta cuenta`
   const [isFollowing, setIsFollowing] = useState(false)
-  
+
   const handleClick = () => {
     setIsFollowing(!isFollowing)
   }
@@ -20,11 +20,11 @@ const InstagramFollowCard = ({ name, userName, userNameTwitter, commonFollowers 
           alt={`El avatar de ${name}`}
         />
         <div className='ig-followCard-info'>
-          <strong className="ig-followCard-infoUserName">{userName}</strong>
-          <span className="ig-followCard-infoCommonFollowers">{followersText}</span>
+          <strong className='ig-followCard-infoUserName'>{userName}</strong>
+          <span className='ig-followCard-infoCommonFollowers'>{followersText}</span>
         </div>
       </header>
-      <aside className="ig-followCard-aside">
+      <aside className='ig-followCard-aside'>
         <button className={buttonClassName} onClick={handleClick}>{followText}</button>
       </aside>
     </article>
@@ -32,4 +32,3 @@ const InstagramFollowCard = ({ name, userName, userNameTwitter, commonFollowers 
 }
 
 export default InstagramFollowCard
-

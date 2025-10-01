@@ -1,6 +1,6 @@
-export const Square = ({ value, index, updateBoard, selected}) => {
+export const Square = ({ value, index, updateBoard, selected }) => {
   const className = `square ${selected ? 'selected' : ''}`
-  
+
   const handleClick = () => {
     updateBoard(index)
   }
